@@ -1,0 +1,20 @@
+
+version: '3.8'
+services:
+  vijitt-server-app:
+    image: vijitt/server:latest
+    build: .
+    ports:
+      - "3197:8080"
+    container_name: vijitt-server-container
+    restart: always
+    # networks:
+    #   - vijitt-server-network
+    # volumes:
+    #   - /home/ubuntu/dms:/app/logs
+    #   - /home/ubuntu/dms/award_letters:/app/award_letters
+
+
+# networks:
+#   vijitt-server-network:
+#     external: true #Indicates that this is an external network.
